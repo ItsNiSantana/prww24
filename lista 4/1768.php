@@ -7,10 +7,10 @@ while($n = fgets (STDIN))
     $pos = ceil($n/2);
     for($i = 1; $i<= ceil($n/2);$i++)
     {
-        $linha = str_pad("", $pod - 1," ", STR_PAD_LEFT);
-        $linha = str_pad($linha, $pod-1 + $num_ast,  "*", STR_PAD_RIGHT);
+        $linha = str_pad("", $pos - 1," ", STR_PAD_LEFT);
+        $linha = str_pad($linha, $pos-1 + $num_ast,  "*", STR_PAD_RIGHT);
         echo $linha, "\n";
-        $pod--;
+        $pos--;
         $num_ast = $num_ast + 2;
     }
     $meio = ceil(($num_ast-2)/2);
