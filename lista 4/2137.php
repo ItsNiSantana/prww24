@@ -1,26 +1,15 @@
 <?php
+while (true) {
+        $n = intval(trim(fgets(STDIN)));
+        $codlivros = [];
 
-$n = intval(readline());
-$x = 1;
-
-if ($n === 0) {
-    break;
+        for($x = 1; $x<$n; $x++){
+            $codlivros[] = trim(fgets(STDIN));
     
+        }
+        sort($codlivros);
+        foreach ($codlivros as $codlivro) {
+            echo $codlivro, "\n";
+        }
 }
-
-$aux=0000;
-
-while($x<=$n){
-    $codlivros = array_map('intval', explode(' ', readline()));
-    if($codlivros < strlen($aux)){
-        break;
-    }
-    $x++;
-}
-sort($codlivros);
-for($i=0;$i<=$n;$i++){
-    echo $codlivros[$i], "\n";
-    
-}
-
 ?>
