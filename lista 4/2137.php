@@ -1,11 +1,14 @@
 <?php
 while (true) {
-        $n = intval(trim(fgets(STDIN)));
+        $n = intval(readline());
         $codlivros = [];
 
-        for($x = 1; $x<$n; $x++){
-            $codlivros[] = trim(fgets(STDIN));
-    
+        if ($n==0){
+            break;
+        }
+        for($x = 0; $x<$n; $x++){
+            $codlivro = readline();
+            $codlivros[]=$codlivro;
         }
         sort($codlivros);
         foreach ($codlivros as $codlivro) {
